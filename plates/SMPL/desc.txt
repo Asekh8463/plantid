@@ -1,0 +1,2 @@
+//These are where all the plates go. They can be updates or changed as necessry.
+//they MUST be named in the format 49B.jpeg, where the number corresponds to the species and the letterto the plate.
