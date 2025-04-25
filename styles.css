@@ -109,3 +109,15 @@ tbody th:focus::before {
   width: 10000px;
   z-index: -1;
 }
+
+.row img {
+  height: 10vw;
+}
+
+.col img {
+  height: 10vw;
+}
+
+.button img {
+  height: 5vw;
+}
