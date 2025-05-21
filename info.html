@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <title>Plant ID</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+body {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+@media screen and (max-width: 100vw) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+	</style>
+</head>
+
+<body>
+
+<!-- home button/menu :) --->
+    <div id="nav">
+        <div title="Show/hide navigation tools" class="navButton" onclick="navigate()"><img id="navToggle" src="assets/menu.png"></div>
+        <div id="navToggled" style="display:none">
+            <a href="index.html"><div title="Home" class="navButton"><img src="assets/home.png"></div></a>
+            <div title="Restart" class="navButton"><img src="assets/info.png"></div>
+            <div title="About" class="navButton"><img src="assets/que.png"></div>
+			<a href="allplates.html"><div title="See all plates" class="navButton"><img src="assets/que.png"></div></a>
+        </div>
+    </div>
+	
+
+<h3 class="h31">About Us</h3>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="assets\rm_.jpg" class="center_1">
+      <div class="container">
+        <h2>Richard Milne</h2>
+        <p class="title">Concept, photography, graphics and plate design</p>
+        <p>Richard Milne began collecting and identifying plants aged about 7, and was probably always destined to study plant science. He did his undergraduate at Bristol, followed by 5 months on a biological expedition in South America, before starting a PhD on the molecular systematics of invasive British Rhododendron ponticum populations. This was followed by a series of attempts to obtain research funding for self-designed research projects, eventually leading to research papers on Rhododendron biogeography and the description of a new type of hybrid zone. Dr Milne came to Edinburgh University on a research fellowship, but soon became established as a lecturer, and has won four awards for his teaching, all voted for by students. These days, most of his research output is collaborative with several research groups in China, still mostly about biogeography and hybridisation.<br><br>After running in person classes on Plant ID for over a decade, Richard was suddenly faced with the need to create a resource that could be accessed remotely, due to the pandemic. The result was a website that worked rather well for Edinburgh students, but could not be used by anyone else because of copyright issues. His solution was to photograph the entire UK flora, a process that is not quite complete but far enough along to produce the resource you can see here.<br><br>Richard has written two novels, three books of cartoons, and the factual book “Rhododendron”. He lives in Edinburgh with his wife and son.</p>
+        <p>R.Milne@ed.ac.uk</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="assets\ad_.webp" class="center_1">
+      <div class="container">
+        <h2>Ayaan Decosta</h2>
+        <p class="title">Website Design</p>
+        <p>Ayaan Decosta was interested in web development and plants for a long time. After meeting Dr. Milne after one of his lectures at the Botanical Society of Scotland about his new plant ID project, he saw an opportunity to use his two skills int the area to help, and volunteered to do so, buildig this website.</p>
+        <p>A.Decosta@ed.ac.uk</p>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+<script src="script.js">
+</script>
+</html>

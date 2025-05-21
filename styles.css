@@ -3,6 +3,23 @@
     /*sticks it to the top of the screen*/
     z-index: 90;
     padding: 1vw;
+	margin-top: 0vw;
+}
+
+#nav1 {
+    position: fixed;
+    /*sticks it to the top of the screen*/
+    padding: 2vw;
+	justify-content: center;
+    align-items: center;
+	margin-left: 28vw;
+	z-index: 90;
+	margin-top: -10vw;
+}
+
+body {
+    font-family: 'Aoboshi One';
+	background-color: #e1e6e1;
 }
 
 .navButton {
@@ -18,7 +35,7 @@
     padding: .5vw;
     cursor: pointer;
     position: relative;
-    background-color: #42e4a5;
+    background-color: #3f8228;
     box-shadow: 0.5vw #39bc89;
     border-radius: 1vw;
 }
@@ -30,16 +47,17 @@
 .button, .button1 {
     justify-content: center;
     align-items: center;
-    margin: 0 auto .5vw auto;
+    margin: 0 auto 1.1vw auto;
     border: none;
     display: flex;
-    padding: 1.5vw;
+    padding: 1.2vw;
     font-size: 2vw;
     cursor: pointer;
     position: relative;
-    background-color: #42e4a5;
-    box-shadow: 0 .5vw #39bc89;
+    background-color: #3f826d;
+    box-shadow: 0 .5vw #285245;
     border-radius: 1vw;
+	font-family: 'Aoboshi One';
 }
 
 .button {
@@ -50,8 +68,24 @@
 	width: 40vw;
 }
 
-h2 {
-    margin-left: 40vw;
+.imgwdct {
+	width: 95vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgwdct1 {
+	width: 95vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vw;
+}
+
+.button1:hover, .button:hover {
+    background-color: #4a9880;
+    box-shadow: 0 0vw #4a9880;
 }
 
 table {
@@ -120,4 +154,83 @@ tbody th:focus::before {
 
 .button img {
   height: 5vw;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 20vw;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 0%;
+  margin-left: -5vw;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.h31 {
+  text-align: center;
+  font-size: 2vw;
+}
+
+h1, h4 {
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+h5, h3 {
+  text-align: center;
+}
+
+h5 {
+  font-size: 2.2vw;
+}
+
+h3 {
+  font-size: 1.2vw;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.center_1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20vw;
 }
