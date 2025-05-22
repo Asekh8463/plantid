@@ -2,41 +2,43 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/icon.png">
-    <title>Plant ID</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
+  <title>Plant ID</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
 <!-- home button/menu :) --->
-    <div id="nav">
-        <div title="Show/hide navigation tools" class="navButton" onclick="navigate()"><img id="navToggle" src="assets/menu.png"></div>
-        <div id="navToggled" style="display:none">
-            <a href="index.html"><div title="Home" class="navButton"><img src="assets/home.png"></div></a>
-            <a href="info.html"><div title="Restart" class="navButton"><img src="assets/info.png"></div></a>
-            <div title="About" class="navButton"><img src="assets/que.png"></div>
-        </div>
+  <div id="nav">
+    <div title="Show/hide navigation tools" class="navButton" onclick="navigate()" style="margin-top:-1vw"><img id="navToggle" src="assets/menu.png"></div>
+    <div id="navToggled" style="display:none">
+      <a href="index.html"><div title="Home" class="navButton"><img src="assets/home.png"></div></a>
+      <a href="info.html"> <div title="Information" class="navButton" href = "info.html"><img src="assets/info.png"></div></a>
+      <div title="FAQ" class="navButton"><img src="assets/que.png"></div>
+	  <a href="allplates.html"><div title="See all plates" class="navButton"><img src="assets/book.png"></div></a>
     </div>
+  </div>
 	
 	
 	<h3 class="h31">Help and FAQ</h3>
 	<h1>How do I use this?</h1>
 	<h4>Answer the first question, and then observe your plant more closely. Match your plant's flower and petal arrangement to the nearest image. This will give you a list of possible matches for your plant.</h4>
-	<h1>I couldn't find a match!</h1>
-	<h4>Double-check to ensure you identified the flower and petal morphology correctly, and also ensure that you looked through all of the possible plates.</h4>
+	<h1>What does the flowering time indicate? How can I use its?</h1>
+	<h4>The flowering time period is shown in the form of a ring surround the rarity symbol. An example is shown below of a flowering period of April to July. The months of the year follow the numbers on a clock face, i.e. January is 12-1, February 1-2, etc. The months when a species is normally in flower are shown, the rest made extremely faint. <br><img src="assets/exampl.png" class="center_1"><br>
+It should be noted that flowering times are a guide rather than an absolute rule, and occasional individuals may be found flowering outside of a normal period for a species. For commoner species at least, flowering periods may be viewed as when most individuals are likely to be in flower. However, flowering periods may also happen earlier or later in any given year due to weather conditions  (e.g. a hot or cold spring will bring flowering times forward or backward, respectively).</h4>
 	<h1>There are too many plates; Is there some way to sort through them?</h1>
-	<h4>This table sorts some of the families by leaf morphology. You can use it to exclude some of your plates.</h4>
+	<h4>You can use the leaf morphology table, flowering time, or location to exclude some of your plates.</h4>
 	<h1>I found an error, mistake, or bug!</h1>
-	<h4>This is a new resource, built by one very busy University lecturer and a second year student.As such, despite all our best efforts, there are bound to be occasional errors or omissions.  If you spot one, please contact us! <br> Likewise, if you have suggestions for improvements, other feedback, or just want to tell us if it worked for you, please do get in touch.<br> r.milne@ed.ac.uk</h4>
+	<h4>This is a new resource, built by one very busy University lecturer and a second year student. As such, despite all our best efforts, there are bound to be occasional errors or omissions. If you spot one, please contact us! <br> Likewise, if you have suggestions for improvements, other feedback, or just want to tell us if it worked for you, please do get in touch at r.milne@ed.ac.uk</h4>
 	<h1>WHat species does this cover?</h1>
 	<h4>At the time of writing, this resource includes images of almost all native flowering plant species present in Britain, and a high proportion of alien taxa. Some native species that closely resemble another, commoner species are not included.</h4>
-	<h1>WHere are the photos from, and are there any yet to be added?</h1>
-	<h4>Almost all photos are by Dr Milne, the exceptions being one (Plymouth Pear) by his parents Jane and Andrew, and a handful of copyright-free images taken from Wikimedia and very old picture books that are out of copyright.  The plan is to gradually replace these with photos over the next few years. In addition, he am well behind on grasses, and incomplete plates for these will be added in autumn or early next year, along with ferns and conifers.</h4>
+	<h1>Where are the photos from, and are there any yet to be added?</h1>
+	<h4>Almost all photos are by Dr Milne, the exceptions being one (Plymouth Pear) by his parents Jane and Andrew, and a handful of copyright-free images taken from Wikimedia and very old picture books that are out of copyright. The plan is to gradually replace these with photos over the next few years. In addition, he am well behind on grasses, and incomplete plates for these will be added in autumn or early next year, along with ferns and conifers.</h4>
 	<h1>Why aren't all British alien species included in this guide?</h1>
-	<h4>Although only two thirds of the alien species recorded from Britain are shown here, these include almost all of the more common ones.  In fact the bulk of alien species recorded from Britain are extremely rare here, many having been seen only a very few times and often only persisting for a year or two.  Famous thugs like the Japanese Knotweed, Giant Hogweed and <i>Rhododendron ponticum</i> are the exception, not the rule! Most aliens are not invasive, and many die out very quickly. This means that you are highly unlikely to encounter an alien not shown here but if you do, please report it to the BSBI as it might be a rare and interesting introduction.</h4>
+	<h4>Although only two thirds of the alien species recorded from Britain are shown here, these include almost all of the more common ones. In fact the bulk of alien species recorded from Britain are extremely rare here, many having been seen only a very few times and often only persisting for a year or two. Famous thugs like the Japanese Knotweed, Giant Hogweed and <i>Rhododendron ponticum</i> are the exception, not the rule! Most aliens are not invasive, and many die out very quickly. This means that you are highly unlikely to encounter an alien not shown here but if you do, please <a href = "https://bsbi.org/record-a-plant">report it to the BSBI</a> as it might be a rare and interesting introduction.</h4>
 </body>
 <script src="script.js">
 </script>

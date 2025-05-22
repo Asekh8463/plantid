@@ -241,6 +241,8 @@ var list_of_species = [
  },
 ]
 
+let b_id = " ";
+
 function navigate()
 {
     if (navToggled.style.display == "none")
@@ -259,17 +261,17 @@ function hideresults()
 	document.getElementById("qtable").style.display = "none";
 	document.getElementById("tbhae").style.display = "block";
 	document.getElementById("cbtn").style.display = "none";
+	document.getElementById("vbtn").style.display = "none";
+	document.getElementById("img1").style.display = "none";
 	let i1 = 0;
 	while(i1 < 52)
 	{
 		let platedesc = "p" + i1;
-		let platedec1 = "i" + i1;
 		document.getElementById(platedesc).style.display = "none";
 		document.getElementById(platedesc).src = "#";
-		document.getElementById(platedec1).style.display = "none";
-		document.getElementById(platedec1).src = "#";
 		++i1;
 	}
+	b_id = " ";
 }
 
 function hideresultsrestart()
@@ -277,19 +279,20 @@ function hideresultsrestart()
 	document.getElementById("treeend").style.display = "none";
 	document.getElementById("qtable").style.display = "none";
 	document.getElementById("cbtn").style.display = "none";
+	document.getElementById("vbtn").style.display = "none";
+	document.getElementById("img1").style.display = "none";
+	let i1 = 0;
 	while(i1 < 52)
 	{
 		let platedesc = "p" + i1;
-		let platedec1 = "i" + i1;
 		document.getElementById(platedesc).style.display = "none";
 		document.getElementById(platedesc).src = "#";
-		document.getElementById(platedec1).style.display = "none";
-		document.getElementById(platedec1).src = "#";
 		++i1;
 	}
 	document.getElementById("qn").innerHTML = "Is your plant any of the following?";
 	document.getElementById("f4").style.display = "block";
 	document.getElementById("tbhae").style.display = "block";
+	b_id = " ";
 }
 
 
@@ -300,6 +303,7 @@ function firstfourq(clickedid)
 	if(clickedid == "treeb")
 	{
 		document.getElementById("treeend").style.display = "block";
+		document.getElementById("fltyp2").style.display = "block";
 	}
 	else //move on
 	{	
@@ -317,6 +321,7 @@ document.getElementById("qtable").style.display = "none";
 document.getElementById("fltyp2").style.display = "none";
 document.getElementById("f4").style.display = "none";
 document.getElementById("cbtn").style.display = "block";
+document.getElementById("vbtn").style.display = "block";
 if(clickedid == "aquab")
 {
 document.getElementById("tbhae").style.display = "none";
@@ -337,58 +342,64 @@ document.getElementById("qn").style.display = "none";
 			}
 		}
 	})
-	platesjson.forEach(item => {
-		if(item.id == clickedid)
-		{
-			let xl = item.load.length;
-			let i = 0;
-			while(i < xl)
-			{
-				let platedesc = "i" + i;
-				let tbl = "plates/RMPLB/" + item.load[i];
-				document.getElementById(platedesc).style.display = "none";
-				document.getElementById(platedesc).src = tbl;
-				++i;
-			}
-		}
-	})
+	b_id = clickedid;
+	console.log(clickedid);
+	console.log(b_id);
 }
 
 
-function sw_easier(clickedid)
-{ //intermediate plates swapper
-let pl = "p";
-let zl = "i";
+function sw_easier()
+{
 	if(document.getElementById("cbtn").innerHTML == "See intermediate (simplified) plates")
 	{
-		let i1 = 0;
-		while(i1 < 52)
-		{
-			let platedesc = "i" + i1;
-			let platedesc2 = "p" + i1;
-			if(document.getElementById(platedesc).src != "#")
+		platesjson.forEach(item => {
+			if(item.id == b_id)
 			{
-				document.getElementById(platedesc).style.display = "block";
+				let xl = item.load.length;
+				let i = 0;
+				while(i < xl)
+				{
+					let platedesc = "p" + i;
+					let tbl = "plates/RMPLB/" + item.load[i];
+					document.getElementById(platedesc).style.display = "block";
+					document.getElementById(platedesc).src = tbl;
+					++i;
+				}
 			}
-			document.getElementById(platedesc2).style.display = "none";
-			++i1;
-		}
+		})
 		document.getElementById("cbtn").innerHTML = "See full (advanced) plates"
 	}
 	else
 	{
-		let i1 = 0;
-		while(i1 < 52)
-		{
-			let platedesc = "p" + i1;
-			let platedesc2 = "i" + i1;
-			if(document.getElementById(platedesc).src != "#")
+		platesjson.forEach(item => {
+			if(item.id == b_id)
 			{
-				document.getElementById(platedesc).style.display = "block";
+				let xl = item.load.length;
+				let i = 0;
+				while(i < xl)
+				{
+					let platedesc = "p" + i;
+					let tbl = "plates/SMPL/" + item.load[i];
+					document.getElementById(platedesc).style.display = "block";
+					document.getElementById(platedesc).src = tbl;
+					++i;
+				}
 			}
-			document.getElementById(platedesc2).style.display = "none";
-			++i1;
-		}
+		})
 		document.getElementById("cbtn").innerHTML = "See intermediate (simplified) plates"
+	}
+}
+
+function seeleaf()
+{
+	if(document.getElementById("vbtn").innerHTML == "See leaf morphology sorter")
+	{
+		document.getElementById("img1").style.display = "block";
+		document.getElementById("vbtn").innerHTML = "Hide leaf morphology sorter";
+	}
+	else
+	{
+		document.getElementById("img1").style.display = "none";
+		document.getElementById("vbtn").innerHTML = "See leaf morphology sorter";
 	}
 }
